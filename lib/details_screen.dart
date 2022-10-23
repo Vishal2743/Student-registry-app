@@ -2,7 +2,8 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatefulWidget {
-  const DetailsScreen({Key? key}) : super(key: key);
+  late List<Map<String, String>> studentListDetails;
+  DetailsScreen(this.studentListDetails);
 
   @override
   State<DetailsScreen> createState() => _DetailsScreenState();
@@ -60,11 +61,17 @@ class _DetailsScreenState extends State<DetailsScreen> {
               const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
-                  Map<String, String> students = {
-                    'register-number': studentRegisterNumber.text,
-                    'name': studentName.text,
-                  };
-                  dbRef.push().set(students);
+                  setState(() {
+                    Map<String, String> students = {
+                      'register-number': studentRegisterNumber.text,
+                      'name': studentName.text,
+                    };
+                    dbRef.push().set(students);
+                    widget.studentListDetails.add({
+                      'register-number': studentRegisterNumber.text,
+                      'name': studentName.text,
+                    });
+                  });
                 },
                 style: ElevatedButton.styleFrom(
                   primary: const Color.fromRGBO(77, 183, 153, 1),

@@ -20,7 +20,7 @@ class _TabsScreenState extends State<TabsScreen> {
     _pages = [
       {
         'title': 'Enter details',
-        'page': const DetailsScreen(),
+        'page': DetailsScreen(widget.studentListDetails),
       },
       {
         'title': 'View records',
