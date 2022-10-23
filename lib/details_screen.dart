@@ -61,12 +61,12 @@ class _DetailsScreenState extends State<DetailsScreen> {
               const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
+                  Map<String, String> students = {
+                    'register-number': studentRegisterNumber.text,
+                    'name': studentName.text,
+                  };
+                  dbRef.push().set(students);
                   setState(() {
-                    Map<String, String> students = {
-                      'register-number': studentRegisterNumber.text,
-                      'name': studentName.text,
-                    };
-                    dbRef.push().set(students);
                     widget.studentListDetails.add({
                       'register-number': studentRegisterNumber.text,
                       'name': studentName.text,
