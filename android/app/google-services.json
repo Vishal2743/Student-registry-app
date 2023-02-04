@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "426565022137",
+    "project_id": "student-registry-d5c90",
+    "storage_bucket": "student-registry-d5c90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:426565022137:android:326a8092debe3a59fcc668",
+        "android_client_info": {
+          "package_name": "com.example.student_attendance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "426565022137-k69t3h46sgfcv26gb2truk1ol3gj8og9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjq7VwZhLMAP9Ce0szhvlIVxFURaHGjxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "426565022137-k69t3h46sgfcv26gb2truk1ol3gj8og9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
